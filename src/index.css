@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 2%;
+    align-content: start;
+}
+
+::selection{
+
+}
+
+x {
+    color: #7C35F1;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.dropShadowCSS {
+    box-shadow: 0px 0px 15px 2px #0000001A;
+}
+
+body {
+    padding-top:40px;
+    background-image: linear-gradient(to bottom right, white, #6000FFAA);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.gridCSS {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* border: 1px solid; */
+}
+
+.grids-col-temp {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.center-div {
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.onHoverText {
+    transform: translateY(30px);
+}
+
+.onHoverDiv:hover .onHoverImg {
+    opacity: 0.8;
+}
+
+.onHoverDiv:hover .onHoverText {
+    animation: reveal 0.15s forwards linear; 
+}
+
+.transistion-fade-in {
+    animation: fade-in 200ms linear forwards;
+}
+
+.transistion-text-fade-nav {
+    animation: text-animation 500ms linear forwards;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(15px);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes text-animation {
+    from {
+        opacity: 0;
+        transform:translateX(20px) ;
+    }
+    to {
+        opacity: 1;
+        transform:translateX(0px)
+    }
+}
